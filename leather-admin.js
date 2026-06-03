@@ -95,7 +95,7 @@ async function saveProduct() {
   if (editId) {
 
     await updateDoc(
-      doc(db, "products", editId),
+      doc(db, "products_leather", editId),
       data
     );
 
@@ -318,7 +318,7 @@ async function deleteProduct(id) {
   if (confirm("Delete this product?")) {
 
     await deleteDoc(
-      doc(db, "products", id)
+      doc(db, "products_leather", id)
     );
 
     loadProducts();
